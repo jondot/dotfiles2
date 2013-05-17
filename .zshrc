@@ -29,21 +29,32 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git autojump colorize)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.nvm/nvm.sh
 
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export GOPATH="$HOME/data/workspaces/golang"
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin:/usr/local/sbin
+export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$HOME/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$HOME/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 eval "$(rbenv init -)"
 
 alias k='kill -9'
-alias o='nautilus'
+alias o='open'
 alias b='bundle exec'
 alias r='rails'
+alias bru='bundle exec rackup'
 
 alias gp='git push origin master'
+alias json='python -mjson.tool | pygmentize -f terminal256 -l javascript -O style=native'
+alias m='mvim'
+
+# assuming having crosscompiling Go distribution.
+# brew install go --devel --cross-compile-all
+alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
+

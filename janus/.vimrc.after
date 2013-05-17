@@ -36,7 +36,6 @@ nmap <leader>D :bufdo bd<CR>
 
 
 
-set guifont=Monaco\ 10.6
 color ir_black
 imap <C-k> <space>=> 
 imap <C-l> <esc>$a
@@ -46,3 +45,4 @@ set showcmd
 behave mswin
 runtime mswin.vim
 
+set guifont=Monaco:h13

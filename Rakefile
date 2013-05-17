@@ -29,6 +29,7 @@ task :bootstrap do
   # custom modules.
   sh 'git clone git://github.com/Lokaltog/vim-powerline.git ~/dotfiles/janus/plugins/vim-powerline'
   sh 'git clone git://github.com/airblade/vim-gitgutter.git ~/dotfiles/janus/plugins/vim-gitgutter'
+  sh 'git clone https://github.com/jnwhiteh/vim-golang.git ~/dotfiles/janus/plugins/vim-golang'
 
 
   puts "done."
