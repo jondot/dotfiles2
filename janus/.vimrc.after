@@ -5,6 +5,8 @@ set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
+let g:airline_powerline_fonts = 1
+
 if has("gui_running")
   set guioptions-=T " no toolbar set guioptions-=m " no menus
   set guioptions-=r " no scrollbar on the right
@@ -45,5 +47,5 @@ set showcmd
 behave mswin
 runtime mswin.vim
 
-set guifont=Monaco:h13
+set guifont=Monaco\ for\ Powerline:h13
 
