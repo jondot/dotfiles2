@@ -51,10 +51,20 @@ alias r='rails'
 alias bru='bundle exec rackup'
 
 alias gp='git push origin master'
+alias gs='git status'
+alias gd='git diff'
+alias gco='git checkout'
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias ga='git add .'
+alias gb='git checkout -b'
+alias gsq='git rebase -i'
 alias json='python -mjson.tool | pygmentize -f terminal256 -l javascript -O style=native'
 alias m='mvim'
 
 # assuming having crosscompiling Go distribution.
 # brew install go --devel --cross-compile-all
 alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
+
+~/bin/habits -repeat 5 -show 2
 
