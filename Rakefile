@@ -27,7 +27,7 @@ task :bootstrap do
 
   # custom modules.
   sh 'git clone git@github.com:bling/vim-airline.git ~/dotfiles/janus/plugins/vim-airline'
-
+  sh 'git clone git@github.com:mtscout6/vim-cjsx.git ~/dotfiles/janus/plugins/vim-cjsx'
 
   puts "done."
   puts 'Set Terminal font to Monaco, 11pt' if on_linux?

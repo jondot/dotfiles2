@@ -43,6 +43,7 @@ imap <C-k> <space>=>
 imap <C-l> <esc>$a
 imap <C-h> <esc>^i
 set showcmd
+set noshowmode
 
 behave mswin
 runtime mswin.vim
