@@ -8,7 +8,9 @@ end
 
 def sym(pointers)
   pointers.each do |link, source|
-    symlink File.expand_path(source), File.expand_path(link)
+    if !File.exist?(File.expand_path(link))
+      symlink File.expand_path(source), File.expand_path(link)
+    end
   end
 end
 
@@ -19,6 +21,7 @@ task :bootstrap do
       '~/.fonts' => '~/dotfiles/.fonts',
       '~/.janus' => '~/dotfiles/janus/plugins',
       '~/.vimrc.after' => '~/dotfiles/janus/.vimrc.after',
+      '~/.vimrc.before' => '~/dotfiles/janus/.vimrc.before',
       '~/.tmux.conf'   => '~/dotfiles/.tmux.conf'
 
 
