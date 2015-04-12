@@ -68,3 +68,5 @@ alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
 
 ~/bin/habits -repeat 5 -show 2
 
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh

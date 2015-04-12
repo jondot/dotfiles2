@@ -50,4 +50,6 @@ runtime mswin.vim
 
 let g:airline_powerline_fonts = 1
 set guifont=Monaco\ for\ Powerline:h13
+let g:NERDTreeWinPos = "right"
+
 
