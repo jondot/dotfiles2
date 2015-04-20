@@ -52,4 +52,5 @@ let g:airline_powerline_fonts = 1
 set guifont=Monaco\ for\ Powerline:h13
 let g:NERDTreeWinPos = "right"
 
+hi Visual  guifg=#000000 guibg=#66bbff gui=none
 
