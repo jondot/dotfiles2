@@ -1,0 +1,63 @@
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list listchars=tab:\ \ ,trail:·
+
+
+if has("gui_running")
+  set guioptions-=T " no toolbar set guioptions-=m " no menus
+  set guioptions-=r " no scrollbar on the right
+  set guioptions-=R " no scrollbar on the right
+  set guioptions-=l " no scrollbar on the left
+  set guioptions-=b " no scrollbar on the bottom
+  set guioptions=aiA 
+  set mouse=a
+
+endif
+
+let mapleader = ","
+
+" Map ESC
+imap jj <ESC>
+nnoremap ; :
+
+" Move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+
+" Switch between buffers
+noremap <tab> :bn<CR>
+noremap <S-tab> :bp<CR>
+nmap <leader>d :bd<CR>
+nmap <leader>D :bufdo bd<CR>
+
+
+
+color ir_black
+imap <C-k> <space>=> 
+imap <C-l> <esc>$a
+imap <C-h> <esc>^i
+set showcmd
+set noshowmode
+
+behave mswin
+runtime mswin.vim
+
+let g:airline_powerline_fonts = 1
+set guifont=Monaco\ for\ Powerline:h13
+let g:NERDTreeWinPos = "right"
+" start nerdtree automatically only if no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" ctrlp
+macmenu File.Print key=<nop>
+map <D-p> :CtrlP<CR>
+
+hi Visual  guifg=#000000 guibg=#66bbff gui=none
+
