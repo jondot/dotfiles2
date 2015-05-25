@@ -49,6 +49,8 @@ behave mswin
 runtime mswin.vim
 
 set guifont=Monaco\ for\ Powerline:h13
+let NERDTreeQuitOnOpen=0
+let NERDTreeMinimalUI=0
 let g:NERDTreeWinPos = "right"
 " start nerdtree automatically only if no files specified
 autocmd StdinReadPre * let s:std_in=1
