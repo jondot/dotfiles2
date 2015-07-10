@@ -19,10 +19,13 @@ desc "Bootstrap a fresh account"
 task :bootstrap do
   sym '~/.zshrc' => '~/dotfiles/.zshrc',
       '~/.fonts' => '~/dotfiles/.fonts',
+      # XXX todo - nuke janus. no longer using that.
       '~/.janus' => '~/dotfiles/janus/plugins',
       '~/.vimrc.after' => '~/dotfiles/janus/.vimrc.after',
       '~/.vimrc.before' => '~/dotfiles/janus/.vimrc.before',
-      '~/.tmux.conf'   => '~/dotfiles/.tmux.conf'
+
+      '~/.tmux.conf'   => '~/dotfiles/.tmux.conf',
+      '~/.xvimrc'   => '~/dotfiles/.xvimrc'
 
 
   `sudo fc-cache -f -v` if on_linux?
