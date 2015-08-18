@@ -48,7 +48,7 @@ set noshowmode
 behave mswin
 runtime mswin.vim
 
-set guifont=Monaco\ for\ Powerline:h13
+set guifont=Monaco\ for\ Powerline:h16
 let NERDTreeQuitOnOpen=0
 let NERDTreeMinimalUI=0
 let g:NERDTreeWinPos = "right"
