@@ -3,5 +3,8 @@ Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'chriskempson/base16-vim'
 Plugin 'keith/swift.vim'
 Plugin 'effkay/argonaut.vim'
+Plugin 'rstacruz/sparkup'
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'geoffharcourt/one-dark.vim'
 
 
