@@ -1,4 +1,4 @@
-UnBundle 'neocomplete'
+"UnBundle 'neocomplete'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'chriskempson/base16-vim'
 Plugin 'keith/swift.vim'

@@ -38,17 +38,40 @@ nmap <leader>D :bufdo bd<CR>
 
 
 
-color ir_black
+" color ir_black
+color base16-chalk
+
 imap <C-k> <space>=> 
 imap <C-l> <esc>$a
 imap <C-h> <esc>^i
 set showcmd
 set noshowmode
 
+
+" YCM invoke  https://github.com/Valloric/YouCompleteMe/issues/420
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+
+" Move up and down in autocomplete with <c-j> and <c-k>
+" http://stackoverflow.com/questions/21900031/vim-style-keys-to-navigate-up-and-down-in-omnicomplete-box
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
+
 behave mswin
 runtime mswin.vim
 
-set guifont=Monaco\ for\ Powerline:h16
+"set guifont=Monaco\ for\ Powerline:h16
+set guifont=Fira\ Mono\ for\ Powerline:h16
 let NERDTreeQuitOnOpen=0
 let NERDTreeMinimalUI=0
 let g:NERDTreeWinPos = "right"
