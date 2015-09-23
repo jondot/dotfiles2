@@ -61,6 +61,7 @@ alias gb='git checkout -b'
 alias gsq='git rebase -i'
 alias json='python -mjson.tool | pygmentize -f terminal256 -l javascript -O style=native'
 alias m='mvim'
+alias gcld='git clone --depth 1'
 
 # assuming having crosscompiling Go distribution.
 # brew install go --devel --cross-compile-all
