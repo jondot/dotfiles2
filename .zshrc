@@ -42,6 +42,7 @@ export PATH=$HOME/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/dotfiles/starter-kits/:$PATH"
+export PATH="$HOME/dotfiles/bin/:$PATH"
 
 eval "$(rbenv init -)"
 

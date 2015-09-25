@@ -3,7 +3,7 @@ name = ARGV[0]
 abort("Please give me a project name") unless name
 puts `git clone --depth 1 git@github.com:pheuter/essential-react.git #{ name }`
 `cd #{name} && rm -rf .git && npm install`
-puts "Okay."
+puts "Generated #{name}."
 
 
 
