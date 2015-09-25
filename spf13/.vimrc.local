@@ -75,7 +75,7 @@ function! <SID>ExpandSnippetOrReturn()
     return "\<CR>"
   endif
 endfunction
-inoremap <expr> <tab> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
+inoremap <expr> <tab> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<tab>"
 
 
 " Move up and down in autocomplete with <c-j> and <c-k>
