@@ -99,8 +99,13 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " ctrlp
-macmenu File.Print key=<nop>
-map <D-p> :CtrlP<CR>
+if has("gui_running")
+  macmenu File.Print key=<nop>
+  map <D-p> :CtrlP<CR>
+endif
 
 hi Visual  guifg=#000000 guibg=#66bbff gui=none
+
+let g:rainbow_active = 0
+
 
