@@ -45,6 +45,8 @@ export PATH="$HOME/dotfiles/starter-kits/:$PATH"
 export PATH="$HOME/dotfiles/bin/:$PATH"
 
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+
 
 alias k='kill -9'
 alias o='open'
@@ -69,7 +71,6 @@ alias gcld='git clone --depth 1'
 # brew install go --devel --cross-compile-all
 alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
 
-~/bin/habits -repeat 5 -show 2
 
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
