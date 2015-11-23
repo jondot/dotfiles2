@@ -32,7 +32,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git autojump colorize)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.nvm/nvm.sh
 
 # Customize to your needs...
 export GOPATH="$HOME/data/workspaces/golang"
@@ -43,6 +42,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/dotfiles/starter-kits/:$PATH"
 export PATH="$HOME/dotfiles/bin/:$PATH"
+export PATH="$HOME/tools/go_appengine/:$PATH"
+
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
@@ -72,7 +73,9 @@ alias gcld='git clone --depth 1'
 alias go-pi='GOARCH=arm GOARM=5 GOOS=linux go'
 
 
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 alias dm='docker-machine'
+
+export PATH="~/Applications/calibre.app/Contents/MacOS/:$PATH"
 

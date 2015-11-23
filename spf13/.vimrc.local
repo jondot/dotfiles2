@@ -57,6 +57,9 @@ set showcmd
 set noshowmode
 
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 " YCM invoke  https://github.com/Valloric/YouCompleteMe/issues/420
 " and https://github.com/SirVer/ultisnips/issues/376
 " i've changed to tab for completion
