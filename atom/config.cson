@@ -6,5 +6,7 @@
   core: {}
   editor:
     invisibles: {}
+  "tree-view":
+    showOnRightSide: true
 "tree-view":
   showOnRightSide: true
