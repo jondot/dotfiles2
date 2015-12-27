@@ -111,4 +111,9 @@ hi Visual  guifg=#000000 guibg=#66bbff gui=none
 
 let g:rainbow_active = 0
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+
+nnoremap <leader>ww :Goyo<CR>
 

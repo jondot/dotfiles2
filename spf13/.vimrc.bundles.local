@@ -9,5 +9,8 @@ Plugin 'rstacruz/sparkup'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'geoffharcourt/one-dark.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+
 
 

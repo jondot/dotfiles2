@@ -1,4 +1,4 @@
-
+# bit.ly/bites-keymap
 '.platform-darwin':
   'cmd-0': 'tree-view:toggle-focus'
 
