@@ -1,0 +1,8 @@
+language: node_js
+cache: yarn
+node_js:
+  - "10"
+
+script:
+  - curl https://s3.amazonaws.com/spectral-dev/spectral/install | sh
+  - source_find
