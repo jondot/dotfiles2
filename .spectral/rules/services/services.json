@@ -1,0 +1,144 @@
+{
+    "rules": [
+        {
+            "id": "SVC00001",
+            "name": "Visible Slack Key",
+            "description": "Found a visible Slack Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "services"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SVC00002",
+            "name": "Visible Twilio Key",
+            "description": "Found a visible Twilio Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "services"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "SK[a-z0-9]{32}",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SVC00003",
+            "name": "Visible Slack Webhook",
+            "description": "Found a visible Slack Webhook",
+            "recommendation_template": "Make sure to have all secret URLs are encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "services"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SVC00004",
+            "name": "Visible Google API Key",
+            "description": "Found a visible Google API Key",
+            "recommendation_template": "Make sure to have all secret URLs are encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "services"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "(\"client_secret\":\"[a-zA-Z0-9-_]{24}\")",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SVC00005",
+            "name": "Visible Github API Key",
+            "description": "Found a visible Github API Key",
+            "recommendation_template": "Make sure to have all secret URLs are encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "services"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "[g|G][i|I][t|T][h|H][u|U][b|B].*['|\"][0-9a-zA-Z]{35,40}['|\"]",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "rules": [
+        {
+            "id": "CLD00001",
+            "name": "Visible AWS Key",
+            "description": "Found a visible AWS Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "cloud"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "AKIA[0-9A-Z]{16}",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "CLD00002",
+            "name": "Visible Heroku Key",
+            "description": "Found a visible Heroku Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "cloud"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "[h|H][e|E][r|R][o|O][k|K][u|U].*[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "CLD00003",
+            "name": "Visible Google Cloud Key",
+            "description": "Found a visible Google Cloud Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "cloud"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "\"type\": \"service_account\"",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

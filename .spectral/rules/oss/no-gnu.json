@@ -1,0 +1,88 @@
+{
+    "rules": [
+        {
+            "id": "OSS0001",
+            "name": "No GPL v3",
+            "description": "No GPL v3",
+            "recommendation_template": "Find replacement software with a more permissive license.",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "oss"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": ".*GNU GENERAL PUBLIC LICENSE Version 3.*",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "OSS0002",
+            "name": "No GPL",
+            "description": "No GPL",
+            "recommendation_template": "Find replacement software with a more permissive license.",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "oss"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": ".*GNU General Public License.*",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "OSS0003",
+            "name": "No Affero GPL",
+            "description": "No AGPL",
+            "recommendation_template": "Find replacement software with a more permissive license.",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "oss"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": ".*GNU Affero General Public License.*",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

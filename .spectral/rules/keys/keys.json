@@ -1,0 +1,102 @@
+{
+    "rules": [
+        {
+            "id": "KEYS00001",
+            "name": "Visible RSA Private Key",
+            "description": "Found an RSA Private Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "keys"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "-----BEGIN RSA PRIVATE KEY-----",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "KEYS00002",
+            "name": "Visible OpenSSH Key",
+            "description": "Found a visible OpenSSH Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "keys"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "-----BEGIN OPENSSH PRIVATE KEY-----",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    },
+                    {
+                        "negate": false,
+                        "pattern": "-----BEGIN DSA PRIVATE KEY-----",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    },
+                    {
+                        "negate": false,
+                        "pattern": "-----BEGIN EC PRIVATE KEY-----",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "KEYS00003",
+            "name": "Visible PGP Private Key",
+            "description": "Found an PGP Private Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "keys"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "-----BEGIN PGP PRIVATE KEY BLOCK-----",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

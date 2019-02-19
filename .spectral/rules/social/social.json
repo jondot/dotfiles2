@@ -1,0 +1,60 @@
+{
+    "rules": [
+        {
+            "id": "SOC00001",
+            "name": "Visible Facebook Key",
+            "description": "Found a visible Facebook Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "social"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "[f|F][a|A][c|C][e|E][b|B][o|O][o|O][k|K].*['|\"][0-9a-f]{32}['|\"]",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SOC00002",
+            "name": "Visible Twitter Key",
+            "description": "Found a visible Twitter Key",
+            "recommendation_template": "Make sure to have all keys encrypted in a single safe place",
+            "overrides": [],
+            "disabled": false,
+            "tags": [
+                "social"
+            ],
+            "applies_to": [],
+            "severity": "info",
+            "comment": "",
+            "pattern_group": {
+                "aggregate": "or",
+                "negate": false,
+                "scope": "text",
+                "patterns": [
+                    {
+                        "negate": false,
+                        "pattern": "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*['|\"][0-9a-zA-Z]{35,44}['|\"]",
+                        "pattern_type": "regex",
+                        "modifiers": [],
+                        "comment": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
